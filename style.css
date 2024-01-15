@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    text-decoration: none;
+}
+
+:root {
+    --background-color: #F2F0E4;
+    --secondary-color: #F2E85E;
+    --tertiary-color: #261D02;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 2fr;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 12px;
+    color: var(--text-color-dark);
+}
+
+.sidebar-container {
+    background-color: var(--background-color);
+    padding: 32px;
+    height: 100%;
+    text-align: center;
+}
+
+.bx.bxs-user-circle {
+    font-size: 108px; 
+    margin-bottom: 10px; 
+    margin-top: 24px; 
+}
+
+.username {
+    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.links{
+    margin: 2rem;
+    padding-top: 10px;
+}
+
+.links ul li {
+    list-style-type: none;
+    margin-bottom: 12px;
+}
+
+.links a {
+    cursor: pointer;
+    color: var(--text-color-dark);
+}
+
+.links li a:hover {
+    color: #c51e1e;
+}
+.main {
+    padding: 20px;
+}
+
+.dashboard-container {
+    margin: 1rem 0 1rem 0.5rem;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+    "grid-title" "grid-title"
+    "day-list-title" "night-list-title"
+
+}
+.grid-title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.list-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "grid-title" "grid-title"
+    "day-list-title" "night-list-title"
+    ;
+}
+
+.list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.bx.bx-sun,
+.bx.bxs-moon{
+    font-size: 32px; 
+}
+
+.day-list,
+.night-list {
+    padding: 12px;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+.day-list ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.night-list ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.day-list {
+    background-color: var(--secondary-color);
+}
+
+.night-list {
+    background-color: var(--tertiary-color);
+    color: var(--text-color-light);
+}
+
+.night-list ul li {
+    background-color: var(--tertiary-color);
+    color: var(--text-color-light);
+}
+
+@media screen and (max-width: 376px){
+    .sidebar-container{
+        display: none;
+    }
+    .list-container{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "grid-title"
+        "day-list-title"
+        "night-list-title"
+        ;
+    }
+}
